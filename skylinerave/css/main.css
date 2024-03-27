@@ -1,0 +1,2952 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500;1,700&display=swap");
+* {
+  font-family: "Playfair Display", serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+html {
+  font-size: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+body {
+  background: #edeef0;
+  min-height: 200vh;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 3rem 9%;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  padding: 40px 100px;
+  z-index: 100000;
+}
+
+.header .logo {
+  position: relative;
+  text-align: left;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.header .logo img {
+  width: 10rem;
+}
+
+.header ul {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+}
+
+.header ul li {
+  position: relative;
+  list-style: none;
+}
+
+.header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  -webkit-transform: 0.6s;
+          transform: 0.6s;
+  font-size: 0.8rem;
+}
+
+.header ul li a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.header ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.header .menu-icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.header :root {
+  --bar-bg: #fff;
+}
+
+.header .menu-icon {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.header .menu-icon .menu-icon__cheeckbox {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  -webkit-touch-callout: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.header .menu-icon div {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 22px;
+  height: 12px;
+}
+
+.header .menu-icon span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--bar-bg, #fff);
+  border-radius: 1px;
+  -webkit-transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+  transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+}
+
+.header .menu-icon span:first-of-type {
+  top: 0;
+}
+
+.header .menu-icon span:last-of-type {
+  bottom: 0;
+}
+
+.header .menu-icon.active span:first-of-type,
+.header .menu-icon .menu-icon__cheeckbox:checked + div span:first-of-type {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 5px;
+}
+
+.header .menu-icon.active span:last-of-type,
+.header .menu-icon .menu-icon__cheeckbox:checked + div span:last-of-type {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 5px;
+}
+
+.header .menu-icon.active:hover span:first-of-type,
+.header .menu-icon.active:hover span:last-of-type,
+.header .menu-icon:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
+.header .menu-icon:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
+  width: 22px;
+}
+
+.hed-home.sticky {
+  padding: 5px 100px;
+  background: #000;
+}
+
+.oth-page {
+  padding: 5px 100px;
+  background: #000;
+}
+
+.banner {
+  margin: 0 auto;
+  width: 100%;
+  background: url(../img/TEMPLE.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner .content a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.banner .content a::before, .banner .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.banner .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner .content a:hover::before {
+  width: 0;
+}
+
+.banner .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.aboutas {
+  margin: 0 auto;
+  width: 100%;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.aboutas .content {
+  margin-top: 2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.aboutas .content h3 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.aboutas .content h3 span {
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.aboutas .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.aboutas .content a {
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 0.12em;
+  display: inline-block;
+  position: relative;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.aboutas .content a::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.aboutas .content a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.aboutas .content .link-flash::before, .aboutas .content .link-flash::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.aboutas .content .link-flash::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.aboutas .content .link-flash:hover::before {
+  width: 0;
+}
+
+.aboutas .content .link-flash:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.evnts-sec .box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.evnts-sec .box-container .box {
+  padding-left: 2rem;
+  position: relative;
+  list-style: none;
+}
+
+.evnts-sec .box-container .box figure.effect-lily {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 100%;
+  background: #3085a3;
+  cursor: pointer;
+}
+
+.evnts-sec .box-container .box figure.effect-lily img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  opacity: 0.8;
+  max-width: none;
+  width: calc(100% + 50px);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(-40px, 0, 0);
+  transform: translate3d(-40px, 0, 0);
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.evnts-sec .box-container .box figure.effect-lily figcaption {
+  padding: 2em;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.25em;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  text-align: left;
+}
+
+.evnts-sec .box-container .box figure.effect-lily figcaption div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2em;
+  width: 100%;
+  height: 50%;
+}
+
+.evnts-sec .box-container .box figure.effect-lily figcaption::before, .evnts-sec .box-container .box figure.effect-lily figcaption::after {
+  pointer-events: none;
+}
+
+.evnts-sec .box-container .box figure.effect-lily figcaption,
+.evnts-sec .box-container .box figure.effect-lily figcaption a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.evnts-sec .box-container .box figure.effect-lily figcaption a {
+  font-size: 0;
+  opacity: 0;
+}
+
+.evnts-sec .box-container .box figure.effect-lily h2 {
+  word-spacing: -0.15em;
+  font-weight: 300;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+}
+
+.evnts-sec .box-container .box figure.effect-lily h2,
+.evnts-sec .box-container .box figure.effect-lily h2 p {
+  margin: 0;
+  -webkit-transform: translate3d(0, 40px, 0);
+  transform: translate3d(0, 40px, 0);
+  margin-top: -5rem;
+}
+
+.evnts-sec .box-container .box figure.effect-lily p {
+  letter-spacing: 1px;
+  text-align: left;
+  font-size: 68.5%;
+  color: white;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+  transition: opacity 0.2s, -webkit-transform 0.35s;
+  transition: opacity 0.2s, transform 0.35s;
+  transition: opacity 0.2s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.evnts-sec .box-container .box figure.effect-lily:hover p {
+  opacity: 1;
+}
+
+.evnts-sec .box-container .box figure.effect-lily:hover h2,
+.evnts-sec .box-container .box figure.effect-lily:hover p {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.evnts-sec .box-container .box figure.effect-lily:hover p {
+  -webkit-transition-delay: 0.05s;
+  transition-delay: 0.05s;
+  -webkit-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+}
+
+.Entertainment .carousel-wrap {
+  margin: auto;
+  position: relative;
+}
+
+.Entertainment .owl-theme .owl-dots .owl-dot.active span,
+.Entertainment .owl-theme .owl-dots .owl-dot:hover span {
+  background: #2caae1;
+}
+
+.Entertainment .owl-carousel .owl-nav {
+  overflow: hidden;
+  height: 0px;
+}
+
+.Entertainment .owl-carousel .item {
+  text-align: center;
+}
+
+.Entertainment .owl-carousel .item img {
+  height: 20rem;
+}
+
+.Entertainment .owl-carousel .item p {
+  text-transform: capitalize;
+}
+
+.Entertainment .owl-carousel .item:hover {
+  text-decoration: underline;
+}
+
+.Entertainment .owl-carousel .nav-btn {
+  height: 6.25rem;
+  position: absolute;
+  width: 6.25rem;
+  cursor: pointer;
+  top: 8rem !important;
+}
+
+.Entertainment .owl-carousel .owl-prev.disabled,
+.Entertainment .owl-carousel .owl-next.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.Entertainment .owl-carousel .prev-slide {
+  background: url(../img/left.png) no-repeat scroll;
+  left: -4rem;
+}
+
+.Entertainment .owl-carousel .next-slide {
+  background: url(../img/right.png) no-repeat scroll;
+  right: -7.5rem;
+}
+
+.Entertainment .content {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.Entertainment .content h2 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.Entertainment .content h2:hover {
+  text-decoration: underline;
+}
+
+.Entertainment .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.Planning {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5rem;
+  background: #000;
+  text-align: center;
+  color: #fff;
+}
+
+.Planning .heading-p {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+  margin-top: 3rem;
+}
+
+.Planning .heading-p h2 {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+.Planning .heading-p h2 span {
+  font-style: italic;
+}
+
+.Planning .heading-p a {
+  margin-top: 2.3rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+  font-weight: 400;
+}
+
+.Planning .heading-p a::before, .Planning .heading-p a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.Planning .heading-p a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.Planning .heading-p a:hover::before {
+  width: 0;
+}
+
+.Planning .heading-p a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.Planning .contant {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+  margin-top: 4rem;
+  text-align: left;
+}
+
+.Planning .contant p {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.destination-sect {
+  margin: 0 auto;
+  margin-top: 10rem;
+  width: 95%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0.7)), to(rgba(17, 17, 17, 0.7))), url(../img/blue-mosque-aerial.jpg) no-repeat;
+  background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../img/blue-mosque-aerial.jpg) no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.destination-sect .destination {
+  text-align: center;
+  margin-bottom: -20rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.destination-sect .destination h2 {
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.destination-sect .destination h2 a {
+  color: #fff;
+  line-height: 2;
+}
+
+.destination-sect .destination h2 a:hover {
+  text-decoration: underline;
+}
+
+.destination-sect .destination p {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.destinations {
+  width: 100%;
+}
+
+.destinations .carousel-brant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 90rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 16rem;
+}
+
+.destinations .carousel-brant .card-brant {
+  margin-top: 4.5rem;
+}
+
+.destinations .carousel-brant .card-brant a {
+  color: #000;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+.destinations .carousel-brant .card-brant a:hover {
+  text-decoration: underline;
+}
+
+.destinimage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5rem;
+}
+
+.destinimage .contact {
+  display: none;
+}
+
+.destinimage .boxcontane {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.destinimage .boxcontane .box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.destinimage .boxcontane .box img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 500px;
+  height: 15rem;
+  cursor: pointer;
+}
+
+.destinimage .boxcontane .box a {
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.destinimage .boxcontane .box:hover img,
+.destinimage .boxcontane .box:hover a {
+  text-decoration: underline;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.destinimage .boxcontane2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.destinimage .boxcontane2 .box {
+  text-align: center;
+  padding: 1rem;
+}
+
+.destinimage .boxcontane2 .box img {
+  -webkit-filter: grayscale(100%);
+  /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  width: 100%;
+  max-width: 500px;
+  height: 15rem;
+}
+
+.destinimage .boxcontane2 .box a {
+  text-align: center;
+  color: #000;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.destinimage .boxcontane2 .box:hover img,
+.destinimage .boxcontane2 .box:hover a {
+  text-decoration: underline;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.line {
+  margin-top: 10rem;
+  width: 100%;
+  height: 0;
+  border: 0.1rem solid black;
+  opacity: 0.5;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer .footerlogo {
+  position: relative;
+  line-height: 2;
+}
+
+.footer .footerlogo img {
+  width: 10rem;
+}
+
+.footer .box-container .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.footer .box-container .box a {
+  padding-left: 2rem;
+  font-size: 1rem;
+  color: black;
+}
+
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+}
+
+.credit {
+  text-align: center;
+  font-size: 1rem;
+  padding: 2rem 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.credit a {
+  color: #000;
+  font-size: 1.2rem;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+}
+
+.credit span {
+  font-size: 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.credit span:hover {
+  text-decoration: underline;
+}
+
+.banner-party {
+  margin: 0 auto;
+  width: 100%;
+  background: url(../img/parrtypage.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-party .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-party .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-party .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-party .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner-party .content a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.banner-party .content a::before, .banner-party .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.banner-party .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-party .content a:hover::before {
+  width: 0;
+}
+
+.banner-party .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.party-tots {
+  margin: 0 auto;
+  width: 100%;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.party-tots .content {
+  margin-top: 12rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.party-tots .content h3 {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.party-tots .content h3 span {
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+.party-tots .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.party-tots .content a {
+  text-decoration: none;
+  color: #000;
+  letter-spacing: 0.12em;
+  display: inline-block;
+  position: relative;
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 2;
+}
+
+.party-tots .content a::after {
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.party-tots .content a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.party-tots .content .link-flash::before, .party-tots .content .link-flash::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.party-tots .content .link-flash::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.party-tots .content .link-flash:hover::before {
+  width: 0;
+}
+
+.party-tots .content .link-flash:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.abot-party {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4rem;
+}
+
+.abot-party .image {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 100%;
+}
+
+.abot-party .image img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.abot-party .contant {
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+
+.abot-party .contant h3 {
+  color: #000;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.abot-party .contant h3 span {
+  font-style: italic;
+}
+
+.abot-party .contant p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+.abot-party .contant .get {
+  margin-top: 5rem;
+}
+
+.abot-party .contant .get a {
+  color: #000;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.abot-party .contant .get a::before, .abot-party .contant .get a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.abot-party .contant .get a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.abot-party .contant .get a:hover::before {
+  width: 0;
+}
+
+.abot-party .contant .get a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.textimonial .line {
+  width: 20rem;
+  height: 0;
+  border: 1px solid #000;
+  opacity: 0.5;
+  margin-top: 5rem;
+  margin-left: -11rem;
+}
+
+.textimonial .contant {
+  display: inline;
+  text-transform: capitalize;
+}
+
+.textimonial .contant h3 {
+  margin-top: 5rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.textimonial .contant p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.textimonial .contant p span {
+  font-size: 0.8rem;
+}
+
+.gallary .box-container {
+  margin-top: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gallary .box-container .box {
+  padding: 1rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gallary .box-container .box .image {
+  height: 25rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+.gallary .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.gallary .box-container .box .image img:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.gallary .box-container .box .contant {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallary .box-container .box .contant span {
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.gallary .box-container .box .contant h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.gallary .box-container .box .contant p {
+  margin-top: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.gallary .box-container .box .contant a {
+  color: #000;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.gallary .box-container .box .contant a::before, .gallary .box-container .box .contant a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.gallary .box-container .box .contant a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.gallary .box-container .box .contant a:hover::before {
+  width: 0;
+}
+
+.gallary .box-container .box .contant a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.bg-image {
+  background: url(../img/Featured-Stage.webp) no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.textimonial-right {
+  position: relative;
+  text-align: right;
+  top: 0;
+  margin-bottom: 11rem;
+}
+
+.textimonial-right .line {
+  position: absolute;
+  width: 20rem;
+  height: 0;
+  border: 1px solid #000;
+  opacity: 0.5;
+  right: 0;
+  margin-top: 3rem;
+}
+
+.textimonial-right .contant {
+  display: inline;
+  text-transform: uppercase;
+}
+
+.textimonial-right .contant h3 {
+  margin-top: 6rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+.textimonial-right .contant p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.textimonial-right .contant p span {
+  font-size: 0.8rem;
+}
+
+.banner-portfolio {
+  margin: 0 auto;
+  width: 100%;
+  background: url(../img/protfolio.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-portfolio .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-portfolio .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-portfolio .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-portfolio .content a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.banner-portfolio .content a::before, .banner-portfolio .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.banner-portfolio .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-portfolio .content a:hover::before {
+  width: 0;
+}
+
+.banner-portfolio .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.gallery .heading {
+  text-align: center;
+}
+
+.gallery .heading h3 {
+  color: #000;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.gallery .heading a {
+  color: #000;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.gallery .heading a::before, .gallery .heading a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.gallery .heading a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.gallery .heading a:hover::before {
+  width: 0;
+}
+
+.gallery .heading a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.gallery .box-container {
+  -webkit-columns: 4 25rem;
+          columns: 4 25rem;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery .box-container .box {
+  margin-bottom: 1rem;
+  -webkit-column-break-inside: avoid;
+          break-inside: avoid;
+}
+
+.gallery .box-container .box img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.gallery .box-container .box img:hover {
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+}
+
+.latter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: #000;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+.latter .box-contant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.latter .box-contant .header-contact {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.latter .box-contant .header-contact h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.latter .box-contant .header-contact p {
+  color: #fff;
+}
+
+.latter .box-contant .letter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 40%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+  text-align: left;
+}
+
+.latter .box-contant .letter .hed {
+  color: #fff;
+  text-align: left;
+}
+
+.latter .box-contant .letter .contant {
+  margin-top: 2rem;
+  color: #fff;
+  line-height: 3;
+  letter-spacing: 1px;
+}
+
+.latter .box-contant .letter .contant span {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d6d6d4;
+  line-height: 48px;
+}
+
+.latter .box-contant .letter .contant span input {
+  border: none;
+  background: none;
+  color: #979595;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: 1px;
+  border-bottom: 4px solid #d6d6d4;
+  font-size: 1.05rem;
+  text-align: center;
+  width: 12rem;
+  padding-bottom: 0.4rem;
+}
+
+.latter .box-contant .letter .contant span input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+
+.latter .box-contant .letter .contant span input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.latter .box-contant .letter .contant span input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+
+.latter .box-contant .letter .contant span input::placeholder {
+  text-transform: uppercase;
+}
+
+.latter .box-contant .letter .contant span .num {
+  width: 6rem;
+}
+
+.latter .box-contant .letter .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.latter .box-contant .letter .btn button {
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  text-transform: capitalize;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.latter .box-contant .letter .btn button::before, .latter .box-contant .letter .btn button::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.latter .box-contant .letter .btn button::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.latter .box-contant .letter .btn button:hover::before {
+  width: 0;
+}
+
+.latter .box-contant .letter .btn button:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact .contacthead {
+  margin-top: 6rem;
+}
+
+.contact .contacthead h1 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.contact .address {
+  margin-top: 3rem;
+}
+
+.contact .address h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.contact .address h3 i {
+  font-size: 2.3rem;
+}
+
+.contact .hide-show {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.contact .hide-show ul {
+  margin-top: 1rem;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+}
+
+.contact .hide-show ul li {
+  position: relative;
+  line-height: 2;
+  list-style: none;
+}
+
+.contact .hide-show.active {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.contact .email {
+  margin-top: -4rem;
+}
+
+.contact .email h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.contact .email p {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.contact .email.emaildown {
+  margin-top: 3rem;
+}
+
+.weddin-banner {
+  margin: 0 auto;
+  width: 100%;
+  background: url(../img/Featured-Stage.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.weddin-banner .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.weddin-banner .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.weddin-banner .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.weddin-banner .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.weddin-banner .content a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.weddin-banner .content a::before, .weddin-banner .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.weddin-banner .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.weddin-banner .content a:hover::before {
+  width: 0;
+}
+
+.weddin-banner .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.abot-party-revrse {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 4rem;
+}
+
+.abot-party-revrse .image {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  width: 100%;
+}
+
+.abot-party-revrse .image img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.abot-party-revrse .contant {
+  margin-top: 10rem;
+  text-align: left;
+  margin-right: 2rem;
+}
+
+.abot-party-revrse .contant h3 {
+  color: #000;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.abot-party-revrse .contant h3 span {
+  font-style: italic;
+}
+
+.abot-party-revrse .contant p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding-right: 11rem;
+}
+
+.abot-party-revrse .contant .get {
+  margin-top: 5rem;
+}
+
+.abot-party-revrse .contant .get a {
+  color: #000;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.abot-party-revrse .contant .get a::before, .abot-party-revrse .contant .get a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #000;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.abot-party-revrse .contant .get a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.abot-party-revrse .contant .get a:hover::before {
+  width: 0;
+}
+
+.abot-party-revrse .contant .get a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.wedding-bg-image {
+  background: url(../img/TEMPLE.jpg) no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.wedding-headr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem 9%;
+  margin-top: 10rem;
+}
+
+.wedding-headr .imagge {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem;
+}
+
+.wedding-headr .imagge img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.banner-des {
+  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.52)), to(rgba(117, 19, 93, 0.73))), url(../img/gallary/taj.jpg) no-repeat;
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(../img/gallary/taj.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-des .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-des .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-des .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-des .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner-des .content a {
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.banner-des .content a::before, .banner-des .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.banner-des .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-des .content a:hover::before {
+  width: 0;
+}
+
+.banner-des .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.destinatin-head {
+  margin-top: 8rem;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.contant-destintion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin-left: 30rem;
+}
+
+.contant-destintion ul {
+  font-size: 2rem;
+  line-height: 3;
+  margin: 5rem 9rem;
+}
+
+.contant-destintion ul li {
+  margin-left: -32rem;
+  list-style: none;
+  text-align: left;
+}
+
+.contant-destintion ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  -webkit-transform: 0.6s;
+          transform: 0.6s;
+}
+
+.contant-destintion ul li a::after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.contant-destintion ul li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.banner-desti {
+  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.52)), to(rgba(117, 19, 93, 0.73))), url(../img/gallary/london.jpg) no-repeat;
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(../img/gallary/london.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-desti .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-desti .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-desti .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-desti .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner-desti .content a {
+  margin-top: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 5px;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.banner-desti .content a::before, .banner-desti .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.61);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  border-radius: 5px;
+}
+
+.banner-desti .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-desti .content a:hover::before {
+  width: 0;
+}
+
+.banner-desti .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.banner-desti .content a:hover {
+  background-color: rgba(17, 17, 17, 0.61);
+}
+
+.banner-desti .content a:hover i {
+  padding-left: 2rem;
+}
+
+.banner-desti .content a i {
+  font-size: 1rem;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.wedding-bg-image1 {
+  background: url(../img/gallary/kochi.jpg) no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.Entertainment h1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+.banner-desti2 {
+  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.52)), to(rgba(117, 19, 93, 0.73))), url(../img/gallary/mumbi.jpg) no-repeat;
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(../img/gallary/mumbi.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-desti2 .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-desti2 .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-desti2 .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-desti2 .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner-desti2 .content a {
+  margin-top: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 5px;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.banner-desti2 .content a::before, .banner-desti2 .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.61);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  border-radius: 5px;
+}
+
+.banner-desti2 .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-desti2 .content a:hover::before {
+  width: 0;
+}
+
+.banner-desti2 .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.banner-desti2 .content a:hover {
+  background-color: rgba(17, 17, 17, 0.61);
+}
+
+.banner-desti2 .content a:hover i {
+  padding-left: 2rem;
+}
+
+.banner-desti2 .content a i {
+  font-size: 1rem;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.wedding-bg-image2 {
+  background: url(../img/gallary/karnadaka.jpg) no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.banner-desti3 {
+  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.52)), to(rgba(236, 51, 51, 0.61))), url(../img/gallary/karnadaka.jpg) no-repeat;
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(236, 51, 51, 0.61)), url(../img/gallary/karnadaka.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-desti3 .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-desti3 .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-desti3 .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-desti3 .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner-desti3 .content a {
+  margin-top: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 5px;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.banner-desti3 .content a::before, .banner-desti3 .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.61);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  border-radius: 5px;
+}
+
+.banner-desti3 .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-desti3 .content a:hover::before {
+  width: 0;
+}
+
+.banner-desti3 .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.banner-desti3 .content a:hover {
+  background-color: rgba(17, 17, 17, 0.61);
+}
+
+.banner-desti3 .content a:hover i {
+  padding-left: 2rem;
+}
+
+.banner-desti3 .content a i {
+  font-size: 1rem;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.wedding-bg-image3 {
+  background: url(../img/gallary/mumbi.jpg) no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.banner-desti4 {
+  margin: 0 auto;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 246, 252, 0.52)), to(rgba(236, 51, 51, 0.61))), url(../img/gallary/kochi.jpg) no-repeat;
+  background: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(236, 51, 51, 0.61)), url(../img/gallary/kochi.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.banner-desti4 .content {
+  margin-top: 35rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.banner-desti4 .content h3 {
+  color: #fff;
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.banner-desti4 .content h3 span {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.banner-desti4 .content p {
+  font-weight: 400;
+  max-width: 60rem;
+  margin: 1rem auto;
+  font-size: 1rem;
+  color: #fff;
+  line-height: 2;
+}
+
+.banner-desti4 .content a {
+  margin-top: 2rem;
+  color: #fff;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: inline-block;
+  position: relative;
+  letter-spacing: 1px;
+  font-weight: 500;
+  line-height: 2;
+  background-color: rgba(255, 255, 255, 0.61);
+  border-radius: 5px;
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.banner-desti4 .content a::before, .banner-desti4 .content a::after {
+  margin-top: 1rem;
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.61);
+  -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+  border-radius: 5px;
+}
+
+.banner-desti4 .content a::before {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.banner-desti4 .content a:hover::before {
+  width: 0;
+}
+
+.banner-desti4 .content a:hover:after {
+  width: 100%;
+  left: 0;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.banner-desti4 .content a:hover {
+  background-color: rgba(17, 17, 17, 0.61);
+}
+
+.banner-desti4 .content a:hover i {
+  padding-left: 2rem;
+}
+
+.banner-desti4 .content a i {
+  font-size: 1rem;
+  color: #fff;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+.wedding-bg-image4 {
+  background: url(../img/gallary/outdoor-wedding-venues-in-patna-to-celebrate-a-perfect-open-air-function.jpg) no-repeat;
+  background-size: cover;
+  height: 40rem;
+}
+
+.dessti4-texti {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dessti4-texti .aboutas {
+  margin-top: 3rem;
+  max-width: 50rem;
+  margin-left: 17rem;
+}
+
+@media (max-width: 1250px) {
+  .header {
+    background: #000;
+  }
+  .header ul li a {
+    font-size: 1.5rem;
+  }
+  .header #menu-icon {
+    display: block;
+  }
+  .header ul {
+    overflow-y: hidden;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    background: #000;
+    line-height: 1;
+    text-align: 5;
+    min-height: 100vh;
+    scroll-behavior: unset;
+    font-size: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    -webkit-animation: fadeIndow 1s ease forwards;
+            animation: fadeIndow 1s ease forwards;
+  }
+  .header ul li {
+    margin-top: 3rem;
+  }
+  .header ul.active {
+    -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+            clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+    -webkit-animation: fadeInUp 1s ease backwards;
+            animation: fadeInUp 1s ease backwards;
+    display: block;
+  }
+  section {
+    -webkit-animation: fadeInUp 1s ease backwards;
+            animation: fadeInUp 1s ease backwards;
+  }
+  section.fade {
+    -webkit-animation: fadeIndow 1s ease forwards;
+            animation: fadeIndow 1s ease forwards;
+  }
+  @-webkit-keyframes fadeInUp {
+    0% {
+      -webkit-transform: translate(0px, 100rem);
+              transform: translate(0px, 100rem);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInUp {
+    0% {
+      -webkit-transform: translate(0px, 100rem);
+              transform: translate(0px, 100rem);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+      opacity: 1;
+    }
+  }
+  @-webkit-keyframes fadeIndow {
+    0% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0px, 100rem);
+              transform: translate(0px, 100rem);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIndow {
+    0% {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0px, 100rem);
+              transform: translate(0px, 100rem);
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 60%;
+  }
+  .header {
+    padding: 2rem 2.5rem;
+  }
+  .header.sticky {
+    padding: 1rem 1.5rem;
+  }
+  .Entertainment .owl-carousel .prev-slide {
+    background: url(../img/leftsmall.png) no-repeat scroll;
+    left: -2.6rem;
+  }
+  .Entertainment .owl-carousel .next-slide {
+    background: url(../img/rightsmall.png) no-repeat scroll;
+    right: -6.5rem;
+  }
+  .Planning {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+  }
+  .abot-party {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .abot-party .contant {
+    margin-left: 1rem;
+  }
+  .gallary .box-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .abot-party-revrse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contant-destintion {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 47%;
+    margin-left: 76%;
+  }
+  .dessti4-texti {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dessti4-texti .aboutas {
+    margin-left: 0;
+    max-width: 100rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .evnts-sec .box-container .box figure.effect-lily p {
+    padding-right: 1rem;
+  }
+  .evnts-sec .box-container .box figure.effect-lily:hover p {
+    opacity: 1;
+    margin-top: 5rem;
+  }
+  .evnts-sec .box-container .box figure.effect-lily:hover h2 {
+    margin-top: -11rem;
+  }
+  .destinations {
+    display: none;
+  }
+  .evnts-sec .box-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .gallary .box-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .latter .box-contant .letter {
+    max-width: 68%;
+  }
+  .wedding-headr {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 534px) {
+  .destinimage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .destinimage .contact {
+    display: inline;
+    text-align: center;
+  }
+  .destinimage .contact h2 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .destinimage .contact h2 span {
+    font-style: italic;
+  }
+  .destinimage .contact a {
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+  }
+  .destinimage .contact a:hover {
+    text-decoration: underline;
+  }
+  .latter .box-contant .letter {
+    max-width: 100%;
+  }
+  .contant-destintion {
+    margin-left: 104%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 60%;
+  }
+  .abot-party-revrse .contant h3 {
+    font-size: 2rem;
+  }
+  .abot-party-revrse .contant p {
+    padding-right: 0;
+  }
+  .contant-destintion {
+    margin-left: 22%;
+  }
+  .contant-destintion ul {
+    font-size: 1rem;
+    line-height: 3;
+    margin: 5rem -4rem;
+  }
+  .contant-destintion ul li {
+    margin-left: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
