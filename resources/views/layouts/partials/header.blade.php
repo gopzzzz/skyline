@@ -127,18 +127,7 @@
 													<span class="menu-text">STAFFS</span>
 												</span>
 											</li>
-											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-												<a href="{{ url('staff') }}" class="menu-link menu-toggle">
-													<i class="menu-bullet menu-bullet-line">
-														<span></span>
-													</i>
-													<span class="menu-text">STAFF CREATION</span>
-												
-													<i class="menu-arrow"></i>
-												</a>
-												
-											</li>
-											</li>
+											
 											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 												<a href="{{ url('expensetype') }}" class="menu-link menu-toggle">
 													<i class="menu-bullet menu-bullet-line">
@@ -149,36 +138,8 @@
 												</a>
 												
 											</li>
-											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-												<a href="{{ url('expense') }}" class="menu-link menu-toggle">
-													<i class="menu-bullet menu-bullet-line">
-														<span></span>
-													</i>
-													<span class="menu-text">EXPENSES</span>
-													<i class="menu-arrow"></i>
-												</a>
-												
-											</li>
-											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-												<a href="{{ url('attendance') }}" class="menu-link menu-toggle">
-													<i class="menu-bullet menu-bullet-line">
-														<span></span>
-													</i>
-													<span class="menu-text">Attendance</span>
-													<i class="menu-arrow"></i>
-												</a>
-												
-											</li>
-											<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
-												<a href="{{ url('salary') }}" class="menu-link menu-toggle">
-													<i class="menu-bullet menu-bullet-line">
-														<span></span>
-													</i>
-													<span class="menu-text">Salary</span>
-													<i class="menu-arrow"></i>
-												</a>
-												
-											</li>
+										
+										
 										</ul>
 									</div>
 								</li>

@@ -14,95 +14,9 @@
 		<script src="{{asset('assets/js/pages/widgets.js')}}"></script>
 		<!--end::Page Scripts-->
 		<script>
-		$('.edit_staff').click(function(){
-		var id=$(this).data('id');
 	
-		if(id){
-      $.ajax({
-					type: "POST",
-
-					url: "{{ route('stafffetch') }}",
-					data: {  "_token": "{{ csrf_token() }}",
-					id: id },
-					success: function (res) {
-					console.log(res);
-          var obj=JSON.parse(res)
-          $('#staff_name').val(obj.name);
-		 // $('#image').val(obj.image);
-          $('#emp_id').val(obj.employee_id);
-          $('#designation').val(obj.designation_id);
-          $('#dob').val(obj.dob);
-          $('#blood_group').val(obj.blood_group);
-          $('#phone_number').val(obj.phone);
-		  $('#email').val(obj.email);
-          $('#j_date').val(obj.joining_date);
-          $('#mode').val(obj.salary_mode);
-		  $('#p_salary').val(obj.p_salary);
-          $('#a_salary').val(obj.ap_salary);
-		  $('#uan').val(obj.ua_number);
-          $('#staff_id').val(obj.id);
-         
-					},
-					});	
-		}
-		$('#editstaff_modal').modal('show');
-	});
 	
-		$('.edit_expense').click(function(){
-		var id=$(this).data('id');
 	
-		if(id){
-      $.ajax({
-					type: "POST",
-
-					url: "{{ route('expensefetch') }}",
-					data: {  "_token": "{{ csrf_token() }}",
-					id: id },
-					success: function (res) {
-					console.log(res);
-          var obj=JSON.parse(res)
-          $('#name').val(obj.staff_id);
-		 // $('#image').val(obj.image);
-          $('#type').val(obj.type_id);
-          $('#amount').val(obj.amount);
-		  $('#remark').val(obj.remarks);
-
-          $('#date').val(obj.added_date);
-        
-          $('#expense_id').val(obj.id);
-         
-					},
-					});	
-		}
-		$('#editexpense_modal').modal('show');
-	});
-	$('#attendance').on('click', '.edit_attendance', function () {
-		var id=$(this).data('id');
-	// alert(id);
-
-	if(id){
-      $.ajax({
-					type: "POST",
-
-					url: "{{ route('attendancefetch') }}",
-					data: {  "_token": "{{ csrf_token() }}",
-					id: id },
-					success: function (res) {
-					console.log(res);
-          var obj=JSON.parse(res)
-          //$('#image').val(obj.name);
-		
-
-		  $('#attend_id').val(obj.id);
-          $('#edit_status').val(obj.status);
-		  $('#day_type').val(obj.day_type);
-		 
-         
-					},
-					});	
-		}
-		$('#editattendance_modal').modal('show');
-	});
 
 	$(document).on('click', '.edit_exptype', function () {
     var id = $(this).data('id');
